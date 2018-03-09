@@ -1,8 +1,8 @@
 set nocompatible
 filetype off
 
-set rtp+=~/.vim/bundle/vundle/
-call vundle#rc()
+set rtp+=~/.vim/bundle/Vundle.vim
+call vundle#begin()
 
 " Let Vundle manage Vundle
 Bundle 'gmarik/vundle'
@@ -19,6 +19,9 @@ Bundle 'ctrlpvim/ctrlp.vim'
 Bundle 'slim-template/vim-slim'
 Bundle 'vim-airline/vim-airline'
 Bundle 'rust-lang/rust.vim'
+
+call vundle#end()
+filetype plugin indent on
 
 color jellybeans
 
