@@ -125,4 +125,4 @@ alias git=hub
 export HARVEST_USERNAME="isaac@ike.io"
 export HARVEST_PASSWORD="foc2geph"
 
-curl https://www.wrh.noaa.gov/total_forecast/getprod.php\?afos\=xxxrwrpdt\&wfo\=pdt\&version\=0\&font\=120\&new\=1\&print\=yes -s | grep "RICHLAND AWOS" -B 4
+curl https://www.wrh.noaa.gov/total_forecast/getprod.php\?afos\=xxxrwrpdt\&wfo\=pdt\&version\=0\&font\=120\&new\=1\&print\=yes -s | grep "RICHLAND AWOS"
