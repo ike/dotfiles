@@ -114,13 +114,15 @@ else
     start_agent;
 fi
 
-# Set personal aliases, overriding those provided by oh-my-zsh libs,
-# plugins, and themes. Aliases can be placed here, though oh-my-zsh
-# users are encouraged to define aliases within the ZSH_CUSTOM folder.
-# For a full list of active aliases, run `alias`.
-#
-# Example aliases
 alias zshconfig="vim ~/.zshrc"
 alias ohmyzsh="vim ~/.oh-my-zsh"
 alias cop="time_cop -i -u isaac@ike.io -p foc2geph"
 alias journal="vim ~/journal/$(date '+%Y-%m-%d').txt"
+alias git=hub
+
+# Exports
+
+export HARVEST_USERNAME="isaac@ike.io"
+export HARVEST_PASSWORD="foc2geph"
+
+curl https://www.wrh.noaa.gov/total_forecast/getprod.php\?afos\=xxxrwrpdt\&wfo\=pdt\&version\=0\&font\=120\&new\=1\&print\=yes -s | grep "RICHLAND AWOS" -B 4
