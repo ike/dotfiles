@@ -20,6 +20,7 @@ Bundle 'slim-template/vim-slim'
 Bundle 'vim-airline/vim-airline'
 Bundle 'rust-lang/rust.vim'
 Bundle 'scrooloose/nerdcommenter'
+Bundle 'sotte/presenting.vim'
 
 call vundle#end()
 filetype plugin indent on
