@@ -14,6 +14,7 @@ Bundle 'tpope/vim-fugitive'
 Bundle 'tpope/vim-rails'
 Bundle 'tpope/vim-rake'
 Bundle 'nanotech/jellybeans.vim'
+Bundle 'nightsense/rusticated'
 Bundle 'scrooloose/nerdtree'
 Bundle 'ctrlpvim/ctrlp.vim'
 Bundle 'slim-template/vim-slim'
@@ -25,7 +26,7 @@ Bundle 'sotte/presenting.vim'
 call vundle#end()
 filetype plugin indent on
 
-color jellybeans
+color rusticated
 
 let mapleader=","
 
