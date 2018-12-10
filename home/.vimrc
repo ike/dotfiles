@@ -26,7 +26,7 @@ Bundle 'sotte/presenting.vim'
 call vundle#end()
 filetype plugin indent on
 
-color rusticated
+color jellybeans
 
 let mapleader=","
 

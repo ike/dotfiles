@@ -78,4 +78,7 @@ alias cop="time_cop -i -u isaac@ike.io -p foc2geph"
 alias journal="vim ~/journal/$(date '+%Y-%m-%d').txt"
 alias git=hub
 
+export LC_ALL=en_US.utf-8
+export LANG="$LC_ALL"
+
 curl https://www.wrh.noaa.gov/total_forecast/getprod.php\?afos\=xxxrwrpdt\&wfo\=pdt\&version\=0\&font\=120\&new\=1\&print\=yes -s | grep "RICHLAND AWOS"
