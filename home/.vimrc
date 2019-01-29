@@ -22,6 +22,8 @@ Bundle 'vim-airline/vim-airline'
 Bundle 'rust-lang/rust.vim'
 Bundle 'scrooloose/nerdcommenter'
 Bundle 'sotte/presenting.vim'
+Bundle 'junegunn/fzf', { 'dir': '~/.fzf', 'do': './install --all' }
+Bundle 'junegunn/fzf.vim'
 
 call vundle#end()
 filetype plugin indent on
