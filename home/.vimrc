@@ -26,6 +26,7 @@ Bundle 'junegunn/fzf', { 'dir': '~/.fzf', 'do': './install --all' }
 Bundle 'junegunn/fzf.vim'
 Bundle 'vim-scripts/aspvbs.vim'
 Bundle 'sodapopcan/vim-twiggy'
+Bundle 'junegunn/gv.vim'
 
 call vundle#end()
 filetype plugin indent on
@@ -85,6 +86,12 @@ let NERDTreeHighlightCursorline=1
 let NERDTreeIgnore = ['tmp', '.yardoc', 'pkg']
 autocmd StdinReadPre * let s:std_in=1
 autocmd VimEnter * if argc() == 0 && !exists("s:std_in") | NERDTreeToggle | endi
+
+" FZF
+let g:fzf_history_dir = '~/.local/share/fzf-history'
+
+" Twiggy
+nmap <leader>t :Twiggy<CR>
 
 " vimdiff helpers
 map <silent> <leader>2 :diffget 2<CR> :diffupdate<CR>
