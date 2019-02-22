@@ -24,6 +24,8 @@ Bundle 'scrooloose/nerdcommenter'
 Bundle 'sotte/presenting.vim'
 Bundle 'junegunn/fzf', { 'dir': '~/.fzf', 'do': './install --all' }
 Bundle 'junegunn/fzf.vim'
+Bundle 'vim-scripts/aspvbs.vim'
+Bundle 'sodapopcan/vim-twiggy'
 
 call vundle#end()
 filetype plugin indent on
@@ -37,7 +39,7 @@ set expandtab
 set modelines=0
 set shiftwidth=2
 set clipboard=unnamed
-set synmaxcol=128
+set synmaxcol=4096
 set ttyscroll=10
 set encoding=utf-8
 set tabstop=2
@@ -50,6 +52,7 @@ set nobackup
 set hlsearch
 set ignorecase
 set smartcase
+set lazyredraw
 
 " Automatic formatting
 autocmd BufWritePre *.rb :%s/\s\+$//e
