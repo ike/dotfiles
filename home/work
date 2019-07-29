@@ -1,0 +1,38 @@
+#!/bin/zsh                                                                                                   
+
+if [ -d /Volumes/signsurgery.org/sites/ ] ; then
+  SN="work"
+
+  tmux has -t $SN
+
+  if [ $? = 0 ]  ; then
+    tmux attach-session -t $SN
+    exit 0
+  fi
+
+  cd /Volumes/signsurgery.org/sites/Frontend
+
+  tmux new-session -s $SN -n "work" -d
+  tmux rename-window "frontend"
+  tmux send-keys -t frontend.0 vim Enter
+  tmux split-window
+  tmux select-pane -t frontend.0
+  
+  cd ../API
+  tmux new-window -n "api"
+  tmux send-keys -t api.0 vim Enter
+  tmux split-window
+  tmux select-pane -t api.0
+
+  cd ../../schema
+  tmux new-window -n "schema"
+  tmux send-keys -t schema.0 vim Enter
+  tmux split-window
+  tmux select-pane -t schema.0
+  tmux select-window -t frontend
+
+  tmux attach -t $SN \; resize-pane -t "$SN:0.1" -y 10 \; resize-pane -t "$SN:1.1" -y 10 \; resize-pane -t "$SN:2.1" -y 10
+else
+  echo "signsurgery.org share not attached"
+  exit 1
+fi

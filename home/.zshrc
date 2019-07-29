@@ -77,8 +77,15 @@ alias ohmyzsh="vim ~/.oh-my-zsh"
 alias cop="time_cop -i -u isaac@ike.io -p foc2geph"
 alias journal="vim ~/journal/$(date '+%Y-%m-%d').txt"
 alias git=hub
+alias update-db="cat $(git status -u --porcelain | awk '{print $2}') | docker -H tcp://signsurgerydev.local exec -i signsurgery.org-db sqlcmd"
+alias tmux='tmux -2'
 
 export LC_ALL=en_US.utf-8
 export LANG="$LC_ALL"
 
-curl https://www.wrh.noaa.gov/total_forecast/getprod.php\?afos\=xxxrwrpdt\&wfo\=pdt\&version\=0\&font\=120\&new\=1\&print\=yes -s | grep "RICHLAND AWOS"
+export HOMEBREW_GITHUB_API_TOKEN=d576f239d632cd8d55cf24b7c265bde0292078a4
+export LDFLAGS="-L/usr/local/opt/gettext/lib"
+export CPPFLAGS="-I/usr/local/opt/gettext/include"
+export PATH="/usr/local/opt/gettext/bin:$PATH"
+export PATH=$PATH:/Users/ike/Library/Python/3.7/bin
+export PATH="$HOME/.cargo/bin:$PATH"

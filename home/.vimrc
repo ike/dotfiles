@@ -5,12 +5,13 @@ set rtp+=~/.vim/bundle/Vundle.vim
 call vundle#begin()
 
 " Let Vundle manage Vundle
-Bundle 'gmarik/vundle'
+Bundle 'VundleVim/Vundle.vim'
 
 " My Bundles
 Bundle 'tpope/vim-sensible'
 Bundle 'tpope/vim-surround'
-Bundle 'tpope/vim-fugitive'
+" Bundle 'tpope/vim-fugitive'
+Bundle 'christoomey/vim-tmux-navigator'
 Bundle 'tpope/vim-rails'
 Bundle 'tpope/vim-rake'
 Bundle 'nanotech/jellybeans.vim'
@@ -31,7 +32,7 @@ Bundle 'junegunn/gv.vim'
 call vundle#end()
 filetype plugin indent on
 
-color jellybeans
+color desert
 
 let mapleader=","
 
