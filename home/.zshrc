@@ -83,7 +83,6 @@ alias tmux='tmux -2'
 export LC_ALL=en_US.utf-8
 export LANG="$LC_ALL"
 
-export HOMEBREW_GITHUB_API_TOKEN=d576f239d632cd8d55cf24b7c265bde0292078a4
 export LDFLAGS="-L/usr/local/opt/gettext/lib"
 export CPPFLAGS="-I/usr/local/opt/gettext/include"
 export PATH="/usr/local/opt/gettext/bin:$PATH"
