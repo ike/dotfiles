@@ -15,6 +15,7 @@ Bundle 'christoomey/vim-tmux-navigator'
 Bundle 'tpope/vim-rails'
 Bundle 'tpope/vim-rake'
 Bundle 'nanotech/jellybeans.vim'
+Bundle 'nacitar/terminalkeys.vim'
 Bundle 'nightsense/rusticated'
 Bundle 'scrooloose/nerdtree'
 Bundle 'ctrlpvim/ctrlp.vim'
@@ -55,6 +56,13 @@ set hlsearch
 set ignorecase
 set smartcase
 set lazyredraw
+
+" disable Background Color Erase (BCE) so that color schemes
+" render properly when inside 256-color tmux and GNU screen.
+" see also http://snk.tuxfamily.org/log/vim-256color-bce.html
+if &term =~ '256color'
+  set t_ut=
+endif
 
 " Automatic formatting
 autocmd BufWritePre *.rb :%s/\s\+$//e
