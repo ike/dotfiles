@@ -7,7 +7,7 @@ export ZSH=/Users/ike/.oh-my-zsh
 # Set name of the theme to load. Optionally, if you set this to "random"
 # it'll load a random theme each time that oh-my-zsh is loaded.
 # See https://github.com/robbyrussell/oh-my-zsh/wiki/Themes
-ZSH_THEME="robbyrussell"
+ZSH_THEME=minimal_improve
 
 if [ -f ~/.secrets ]; then
     source ~/.secrets
@@ -32,6 +32,7 @@ source $ZSH/oh-my-zsh.sh
 # This loads nvm
 export NVM_DIR="$HOME/.nvm"
 [ -s "$NVM_DIR/nvm.sh" ] && . "$NVM_DIR/nvm.sh"
+[ -s "$NVM_DIR/bash_completion" ] && \. "$NVM_DIR/bash_completion"  # This loads nvm bash_completion
 
 # This loads rbenv
 eval "$(rbenv init -)"
@@ -74,11 +75,8 @@ fi
 
 alias zshconfig="vim ~/.zshrc"
 alias ohmyzsh="vim ~/.oh-my-zsh"
-alias cop="time_cop -i -u isaac@ike.io -p foc2geph"
 alias journal="vim ~/journal/$(date '+%Y-%m-%d').txt"
 alias git=hub
-alias update-db="cat $(git status -u --porcelain | awk '{print $2}') | docker -H tcp://signsurgerydev.local exec -i signsurgery.org-db sqlcmd"
-alias tmux='tmux -2'
 
 export LC_ALL=en_US.utf-8
 export LANG="$LC_ALL"

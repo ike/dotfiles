@@ -1,12 +1,6 @@
 font:
   normal:
-    family: IBM Plex Mono Text
-  bold:
-    family: IBM Plex Mono
-    style: Bold
-  italic:
-    family: IBM Plex Mono
-    style: Italic
+    family: Iosevka
 colors:
   # Default colors
   primary:

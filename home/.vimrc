@@ -13,6 +13,7 @@ Bundle 'tpope/vim-surround'
 " Bundle 'tpope/vim-fugitive'
 Bundle 'christoomey/vim-tmux-navigator'
 Bundle 'tpope/vim-rails'
+Bundle 'agude/vim-eldar'
 Bundle 'tpope/vim-rake'
 Bundle 'nanotech/jellybeans.vim'
 Bundle 'nacitar/terminalkeys.vim'
@@ -33,7 +34,11 @@ Bundle 'junegunn/gv.vim'
 call vundle#end()
 filetype plugin indent on
 
-color desert
+set background=dark
+color eldar
+
+" Color customizations
+" highlight Search guibg='Purple' guifg='NONE'
 
 let mapleader=","
 
